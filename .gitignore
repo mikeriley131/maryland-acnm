@@ -1,3 +1,9 @@
+design-files/*
+bower_components/*
 node_modules/*
-images/*
-.sass-cache
+_assets/images/*
+.sass-cache/*
+*.map
+*.scssc
+
+.sass-cache/5b3d1a13d169f6eac96e8b23e268c80ae5ae138a/_elements.scssc

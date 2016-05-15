@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
 
+    require('time-grunt')(grunt);
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         meta: {
@@ -9,7 +11,7 @@ module.exports = function(grunt) {
             prod: {
                 options: {
                     style: 'compressed',
-                    sourcemap: 'none',
+                    // sourcemap: 'none',
                     banner: '<%= meta.banner %>'
                 },
                 files: [{
@@ -23,7 +25,7 @@ module.exports = function(grunt) {
             dev: {
                 options: {
                     style: 'expanded',
-                    sourcemap: 'none',
+                    // sourcemap: 'none',
                     banner: '<%= meta.banner %>'
                 },
                 files: [{
@@ -71,6 +73,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-contrib-watch');
 
-    // Default task.
-    grunt.registerTask('default', [ 'sass:prod','sass:dev', 'autoprefixer:dist' ]);
+    // Default task
+    grunt.registerTask('default', [ 'sass:prod','sass:dev','autoprefixer:dist' ]);
 };

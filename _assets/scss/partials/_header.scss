@@ -1,3 +1,111 @@
 /* ===========================================================================
 ==== HEADER
 ============================================================================== */
+header {
+  background: $light-grey;
+  padding: .5em 0;
+  margin: 0 auto;
+
+  .container {
+    max-width: 800px;
+  }
+}
+
+.logo {
+  display: block;
+  text-align: center;
+  border-bottom: none;
+  margin-bottom: 1em;
+
+  @include brk-large {
+    float: left;
+    margin-bottom: .5em;
+  }
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.nav {
+  margin: 0 auto;
+}
+
+.nav__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.nav__item {
+  flex-grow: 1;
+  text-align: center;
+  list-style-type: none;
+}
+
+.nav__link {
+  border-bottom: none;
+}
+
+.nav--utility {
+  max-width: 320px;
+  font-size: .85em;
+
+  @include brk-med {
+    margin-bottom: .5em;
+  }
+
+  @include brk-large {
+    font-size: initial;
+  }
+
+  .nav__list {
+
+    @include brk-large {
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  }
+
+  .nav__link {
+    color: $secondary-color;
+
+    &:hover {
+      color: $tertiary-color;
+    }
+  }
+
+  @include brk-large {
+    float: right;
+    width: 100%;
+
+    .nav__item {
+      text-align: right;
+      margin-bottom: .25em;
+    }
+  }
+}
+
+.nav--primary {
+  text-transform: uppercase;
+  background: $primary-color;
+
+  .container {
+    max-width: 800px;
+  }
+
+  .nav__link {
+    display: inline-block;
+    color: $light-grey;
+
+    &:hover {
+      color: $secondary-color;
+    }
+  }
+
+  @include brk-med {
+    font-size: 1.25em;
+  }
+}

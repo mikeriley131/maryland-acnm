@@ -1,3 +1,50 @@
 /* ===========================================================================
 ==== HOME PAGE STYLES
 ============================================================================== */
+
+.hero {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 15em;
+	background: linear-gradient( rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25) ), url('../images/pink-baby.jpg') center/cover no-repeat #fff;
+  margin-bottom: 2em;
+
+  @include brk-med {
+    height: 20em;
+  }
+
+	p {
+		color: #fff;
+    font-size: 2.25em;
+    line-height: 1.25;
+    width: 90%;
+    text-align: center;
+    margin-bottom: 0;
+
+    @include brk-med {
+      font-size: 3.5em;
+      line-height: 1;
+    }
+	}
+}
+
+.homepage-left {
+  margin-bottom: 1em;
+
+  @include brk-large {
+    @include span(7);
+  }
+}
+
+.homepage-right {
+  @include brk-large {
+    @include span(4 last);
+  }
+}
+
+.fb-page {
+  display: block !important;
+  text-align: center;
+}

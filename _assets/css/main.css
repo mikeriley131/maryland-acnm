@@ -1,4 +1,4 @@
-/* maryland-acnm v1.0.0 - 2016-04-13 - Written by Mike Riley (pyrographicdesign AT gmail DOT com) */
+/* maryland-acnm v1.0.0 - 2016-05-15 - Written by Mike Riley (pyrographicdesign AT gmail DOT com) */
 
 /* ===========================================================================
 ==== INCLUDED FONTS
@@ -422,7 +422,7 @@ th {
 html {
   color: #222;
   font-size: 100%;
-  line-height: 1.618;
+  line-height: 1.5;
 }
 
 /*
@@ -692,15 +692,238 @@ code {
 ==== GLOBAL ELEMENTS
 ============================================================================== */
 body {
-  font-family: Helvetica, Arial, sans-serif;
+  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+}
+
+main {
+  margin-bottom: 1em;
+}
+
+p {
+  font-size: 1.125em;
+}
+
+a {
+  color: #139192;
+  text-decoration: none;
+  border-bottom: 1px dashed #139192;
+}
+a:hover {
+  border-bottom-style: solid;
+}
+
+iframe {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.container {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 .5em;
+}
+.container:after {
+  content: " ";
+  display: block;
+  clear: both;
 }
 
 /* ===========================================================================
 ==== HEADER
 ============================================================================== */
+header {
+  background: #fcfcfc;
+  padding: .5em 0;
+  margin: 0 auto;
+}
+header .container {
+  max-width: 800px;
+}
+
+.logo {
+  display: block;
+  text-align: center;
+  border-bottom: none;
+  margin-bottom: 1em;
+}
+@media screen and (min-width: 60em) {
+  .logo {
+    float: left;
+    margin-bottom: .5em;
+  }
+}
+.logo img {
+  max-width: 100%;
+}
+
+.nav {
+  margin: 0 auto;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  padding: 0;
+}
+
+.nav__item {
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: center;
+  list-style-type: none;
+}
+
+.nav__link {
+  border-bottom: none;
+}
+
+.nav--utility {
+  max-width: 320px;
+  font-size: .85em;
+}
+@media screen and (min-width: 45em) {
+  .nav--utility {
+    margin-bottom: .5em;
+  }
+}
+@media screen and (min-width: 60em) {
+  .nav--utility {
+    font-size: initial;
+  }
+}
+@media screen and (min-width: 60em) {
+  .nav--utility .nav__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: end;
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
+.nav--utility .nav__link {
+  color: #139192;
+}
+.nav--utility .nav__link:hover {
+  color: #977D5D;
+}
+@media screen and (min-width: 60em) {
+  .nav--utility {
+    float: right;
+    width: 100%;
+  }
+  .nav--utility .nav__item {
+    text-align: right;
+    margin-bottom: .25em;
+  }
+}
+
+.nav--primary {
+  text-transform: uppercase;
+  background: #084595;
+}
+.nav--primary .container {
+  max-width: 800px;
+}
+.nav--primary .nav__link {
+  display: inline-block;
+  color: #fcfcfc;
+}
+.nav--primary .nav__link:hover {
+  color: #139192;
+}
+@media screen and (min-width: 45em) {
+  .nav--primary {
+    font-size: 1.25em;
+  }
+}
+
 /* ===========================================================================
 ==== HOME PAGE STYLES
 ============================================================================== */
+.hero {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 15em;
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../images/pink-baby.jpg") center/cover no-repeat #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url("../images/pink-baby.jpg") center/cover no-repeat #fff;
+  margin-bottom: 2em;
+}
+@media screen and (min-width: 45em) {
+  .hero {
+    height: 20em;
+  }
+}
+.hero p {
+  color: #fff;
+  font-size: 2.25em;
+  line-height: 1.25;
+  width: 90%;
+  text-align: center;
+  margin-bottom: 0;
+}
+@media screen and (min-width: 45em) {
+  .hero p {
+    font-size: 3.5em;
+    line-height: 1;
+  }
+}
+
+.homepage-left {
+  margin-bottom: 1em;
+}
+@media screen and (min-width: 60em) {
+  .homepage-left {
+    width: 57.62712%;
+    float: left;
+    margin-right: 1.69492%;
+  }
+}
+
+@media screen and (min-width: 60em) {
+  .homepage-right {
+    width: 32.20339%;
+    float: right;
+    margin-right: 0;
+  }
+}
+
+.fb-page {
+  display: block !important;
+  text-align: center;
+}
+
 /* ===========================================================================
 ==== PRIMARY INTERIOR PAGE STYLES
 ============================================================================== */
@@ -710,6 +933,26 @@ body {
 /* ===========================================================================
 ==== FOOTER
 ============================================================================== */
+footer {
+  color: #fcfcfc;
+  background: #084595;
+  padding: .5em 0;
+  margin: 0 auto;
+}
+footer .container {
+  max-width: 800px;
+}
+footer p {
+  font-size: .85em;
+}
+footer a {
+  color: #fff;
+  border-bottom: none;
+}
+footer a:hover {
+  border-bottom: 1px solid #fcfcfc;
+}
+
 /* ===========================================================================
 ==== HELPER AND MODIFIER CLASSES
 ============================================================================== */

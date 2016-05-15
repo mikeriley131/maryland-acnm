@@ -5,16 +5,26 @@ body {
   font-family: $font-stack;
 }
 
+main {
+  margin-bottom: 1em;
+}
+
 h1, h2, h3, h4 {
 
 }
 
 p {
-
+  font-size: 1.125em;
 }
 
 a {
+  color: $secondary-color;
+  text-decoration: none;
+  border-bottom: 1px dashed $secondary-color;
 
+  &:hover {
+    border-bottom-style: solid;
+  }
 }
 
 a:hover, a:active {
@@ -27,4 +37,15 @@ ul, ol {
 
 li {
 
+}
+
+iframe {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+}
+
+.container {
+  @include container;
+  padding: 0 .5em;
 }

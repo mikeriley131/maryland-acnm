@@ -13,8 +13,9 @@
 
 html {
   color: #222;
-  font-size: 100%; // Set to browser default and then use ems when declaring your various font-sizes. (MR)
-  line-height: 1.618; // Golden Ratio, arguably optimal line-height. (MR)
+  // Set to browser default and then use ems when declaring your various font-sizes.
+  font-size: 100%;
+  line-height: 1.5;
 }
 
 /*
@@ -88,14 +89,16 @@ textarea {
 /* More intuitive box model
 -------------------------------------------------------------------*/
 html {
-  box-sizing: border-box; // More intuitive box model.
+  // More intuitive box model.
+  box-sizing: border-box;
 }
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
 h1, h2, h3,h4 ,h5, h6, p {
-  margin-top: 0; // Only set margins below primary text elements for more intuitive spacing.
+  // Only set margins below primary text elements for more intuitive spacing.
+  margin-top: 0;
 }
 
 ul, ol {
