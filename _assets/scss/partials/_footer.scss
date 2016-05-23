@@ -3,16 +3,18 @@
 ============================================================================== */
 footer {
   color: $light-grey;
+  text-align: center;
   background: $primary-color;
   padding: .5em 0;
   margin: 0 auto;
 
   .container {
-    max-width: 800px;
+    max-width: 960px;
   }
 
   p {
     font-size: .85em;
+    margin-bottom: 0;
   }
 
   a {
@@ -22,5 +24,24 @@ footer {
     &:hover {
       border-bottom: 1px solid $light-grey;
     }
+  }
+}
+
+.footer-copyright {
+  margin-bottom: 1em;
+
+  @include brk-large {
+    @include span(9);
+
+    text-align: left;
+    margin-bottom: 0;
+  }
+}
+
+.footer-social {
+  @include brk-large {
+    @include span(3 last);
+
+    text-align: right;
   }
 }

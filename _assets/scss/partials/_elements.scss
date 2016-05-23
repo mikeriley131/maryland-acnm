@@ -3,28 +3,54 @@
 ============================================================================== */
 body {
   font-family: $font-stack;
+  font-size: 1.125em;
+  counter-reset: number;
 }
 
 main {
-  margin-bottom: 1em;
+  padding: 2em 0;
+
+  h1:first-of-type {
+    color: $highlight-color;
+    text-transform: uppercase;
+  }
+
+  a {
+    color: $secondary-color;
+    text-decoration: none;
+    border-bottom: 1px dashed $secondary-color;
+
+    &:hover {
+      border-bottom-style: solid;
+    }
+  }
+
+  ul {
+
+    li:before {
+      content: '\2192';
+      color: $secondary-color;
+      margin-right: .5em;
+    }
+  }
+
+  ol {
+
+    li:before {
+      counter-increment: number;
+      content: counter(number);
+      color: $secondary-color;
+      margin-right: .5em;
+    }
+  }
 }
 
 h1, h2, h3, h4 {
-
+  line-height: 1;
 }
 
 p {
-  font-size: 1.125em;
-}
 
-a {
-  color: $secondary-color;
-  text-decoration: none;
-  border-bottom: 1px dashed $secondary-color;
-
-  &:hover {
-    border-bottom-style: solid;
-  }
 }
 
 a:hover, a:active {
@@ -32,11 +58,17 @@ a:hover, a:active {
 }
 
 ul, ol {
-
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1em;
 }
 
-li {
-
+blockquote {
+  font-size: 1.25em;
+  font-style: italic;
+  padding: 0 1em;
+  border-left: 4px solid $secondary-color;
 }
 
 iframe {

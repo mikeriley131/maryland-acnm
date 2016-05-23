@@ -2,7 +2,7 @@
 ==== HEADER
 ============================================================================== */
 header {
-  background: $light-grey;
+  background: $grey;
   padding: .5em 0;
   margin: 0 auto;
 
@@ -37,16 +37,18 @@ header {
   align-items: center;
   flex-wrap: wrap;
   padding: 0;
-}
-
-.nav__item {
-  flex-grow: 1;
-  text-align: center;
-  list-style-type: none;
+  margin-bottom: 0;
 }
 
 .nav__link {
+  flex-grow: 1;
+  text-decoration: none;
   border-bottom: none;
+}
+
+.nav__item {
+  text-align: center;
+  list-style-type: none;
 }
 
 .nav--utility {
@@ -74,6 +76,7 @@ header {
 
     &:hover {
       color: $tertiary-color;
+      font-weight: bold;
     }
   }
 
@@ -99,9 +102,29 @@ header {
   .nav__link {
     display: inline-block;
     color: $light-grey;
+    padding: .5em 0;
+    position: relative;
 
     &:hover {
-      color: $secondary-color;
+      background: $secondary-color;
+    }
+  }
+
+  .nav__item {
+
+    &.active-page {
+
+      &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: .5em solid transparent;
+        border-right: .5em solid transparent;
+        border-bottom: .5em solid #fff;
+        position: absolute;
+        bottom: 0;
+        left: calc(50% - .5em);
+      }
     }
   }
 
