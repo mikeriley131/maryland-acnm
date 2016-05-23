@@ -24,6 +24,7 @@ header {
 
   img {
     max-width: 100%;
+    margin-bottom: 0;
   }
 }
 
@@ -74,7 +75,8 @@ header {
   .nav__link {
     color: $secondary-color;
 
-    &:hover {
+    &:hover,
+    &.active-page {
       color: $tertiary-color;
       font-weight: bold;
     }

@@ -1,16 +1,20 @@
 /* ===========================================================================
 ==== HELPER AND MODIFIER CLASSES
 ============================================================================== */
-.left {
-  float: left;
-}
+@include brk-med {
+  .left {
+    float: left;
+    margin-right: 1em;
+  }
 
-.right {
-  float: right;
-}
+  .right {
+    float: right;
+    margin-left: 1em;
+  }
 
-.no-float {
-  float: none;
+  .no-float {
+    float: none;
+  }
 }
 
 // /* FOR WORDPRESS SITES
