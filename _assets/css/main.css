@@ -1,4 +1,4 @@
-/* maryland-acnm v1.0.0 - 2016-05-22 - Written by Mike Riley (pyrographicdesign AT gmail DOT com) */
+/* maryland-acnm v1.0.0 - 2016-06-08 - Written by Mike Riley (pyrographicdesign AT gmail DOT com) */
 
 /* ===========================================================================
 ==== INCLUDED FONTS
@@ -732,8 +732,8 @@ h2 {
   margin-bottom: .25em;
 }
 
-p + ul,
-p + ol {
+.list-intro + ul,
+.list-intro + ol {
   margin-top: -1em;
 }
 
