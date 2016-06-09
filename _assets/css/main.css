@@ -1,4 +1,4 @@
-/* maryland-acnm v1.0.0 - 2016-06-08 - Written by Mike Riley (pyrographicdesign AT gmail DOT com) */
+/* maryland-acnm v1.0.0 - 2016-06-09 - Written by Mike Riley (pyrographicdesign AT gmail DOT com) */
 
 /* ===========================================================================
 ==== INCLUDED FONTS
@@ -693,7 +693,7 @@ code {
 ============================================================================== */
 body {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-  font-size: 1.125em;
+  font-size: 1.5em;
   counter-reset: number;
 }
 
@@ -722,6 +722,10 @@ main ol li:before {
   content: counter(number);
   color: #139192;
   margin-right: .5em;
+}
+main li {
+  text-indent: -1.5em;
+  padding-left: 1.5em;
 }
 
 h1, h2, h3, h4 {
@@ -1000,6 +1004,17 @@ header .container {
 /* ===========================================================================
 ==== PRIMARY INTERIOR PAGE STYLES
 ============================================================================== */
+/* Frequently Asked Questions
+-------------------------------------------------------------------*/
+.faq__term {
+  font-weight: bold;
+}
+
+.faq__definition {
+  margin-bottom: 2em;
+  margin-left: 0;
+}
+
 /* ===========================================================================
 ==== FORM STYLES
 ============================================================================== */
