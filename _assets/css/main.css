@@ -1,4 +1,4 @@
-/* maryland-acnm v1.0.0 - 2016-06-29 - Written by Mike Riley (pyrographicdesign AT gmail DOT com) */
+/* maryland-acnm v1.0.0 - 2016-07-03 - Written by Mike Riley (pyrographicdesign AT gmail DOT com) */
 
 /* ===========================================================================
 ==== INCLUDED FONTS
@@ -693,7 +693,7 @@ code {
 ============================================================================== */
 body {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-  font-size: 1.25em;
+  font-size: 1.125em;
   counter-reset: number;
 }
 
@@ -703,6 +703,9 @@ main {
 main h1:first-of-type {
   color: #130D29;
   text-transform: uppercase;
+}
+main p {
+  margin-bottom: 1.5em;
 }
 main a {
   color: #139192;
@@ -730,11 +733,19 @@ main li {
 }
 
 h1, h2, h3, h4 {
-  line-height: 1;
+  line-height: 1.25;
 }
 
 h2 {
+  margin-bottom: .5em;
+}
+
+h3, h4, h5, h6 {
   margin-bottom: .25em;
+}
+
+h5 {
+  border-bottom: 1px solid #444;
 }
 
 .list-intro + ul,
@@ -767,14 +778,38 @@ img {
   }
 }
 
+small {
+  font-size: .85em;
+  margin-bottom: 1em;
+}
+
 iframe {
   max-width: 100%;
   margin: 0 auto;
   display: block;
 }
 
+table {
+  margin-bottom: 2em;
+}
+
+tr:nth-child(even) {
+  background: #ddd;
+}
+
+th {
+  border-bottom: 1px solid #130D29;
+  padding: .5em;
+  padding-bottom: 0;
+  text-align: left;
+}
+
+td {
+  padding: .5em;
+}
+
 .container {
-  max-width: 960px;
+  max-width: 800px;
   margin-left: auto;
   margin-right: auto;
   padding: 0 .5em;
@@ -788,6 +823,45 @@ iframe {
   .container {
     padding: 0;
   }
+}
+.container .aside {
+  background: #dabda9;
+  line-height: 1.25;
+  margin: 0 0 1em 0;
+  padding: 1.25em;
+}
+@media screen and (min-width: 30em) {
+  .container .aside {
+    float: right;
+    margin: 0 0 1em 1em;
+    width: 33%;
+  }
+}
+.container .aside section {
+  padding-bottom: .25em;
+  border-bottom: 1px solid #444;
+  margin-bottom: 1em;
+}
+.container .aside section:last-of-type {
+  padding-bottom: 0;
+  border-bottom: none;
+  margin-bottom: 0;
+}
+.container .aside h2 {
+  color: #130D29;
+  font-size: 1.125em;
+}
+.container .aside h3 {
+  font-size: .875em;
+  line-height: 1.33;
+  margin-bottom: .25em;
+}
+.container .aside p {
+  font-size: .85em;
+}
+.container .aside a {
+  color: #444;
+  border-color: #444;
 }
 
 /* ===========================================================================
@@ -890,7 +964,7 @@ header .container {
   color: #139192;
 }
 .nav--utility .nav__item:hover, .nav--utility .nav__item.active-page {
-  color: #fcfcfc;
+  color: #fbfbfb;
 }
 @media screen and (min-width: 60em) {
   .nav--utility {
@@ -912,12 +986,15 @@ header .container {
 }
 .nav--primary .nav__link {
   display: inline-block;
-  color: #fcfcfc;
+  color: #fbfbfb;
   padding: .5em 0;
   position: relative;
 }
 .nav--primary .nav__link:hover {
   background: #139192;
+}
+.nav--primary .nav__item {
+  font-size: .75em;
 }
 .nav--primary .nav__item.active-page:after {
   content: '';
@@ -1000,6 +1077,25 @@ header .container {
 /* ===========================================================================
 ==== PRIMARY INTERIOR PAGE STYLES
 ============================================================================== */
+/* For Midwives
+------------------------------------------------------------------------------ */
+@media screen and (min-width: 60em) {
+  .table--legislators th:nth-child(1) {
+    width: 5%;
+  }
+  .table--legislators th:nth-child(2) {
+    width: 23%;
+  }
+  .table--legislators th:nth-child(3) {
+    width: 5%;
+  }
+  .table--legislators th:nth-child(4) {
+    width: 15%;
+  }
+  .table--legislators th:nth-child(5) {
+    width: 15%;
+  }
+}
 /* Frequently Asked Questions
 -------------------------------------------------------------------*/
 .faq__term {
@@ -1018,7 +1114,7 @@ header .container {
 ==== FOOTER
 ============================================================================== */
 footer {
-  color: #fcfcfc;
+  color: #fbfbfb;
   text-align: center;
   background: #084595;
   padding: .5em 0;
@@ -1036,7 +1132,7 @@ footer a {
   border-bottom: none;
 }
 footer a:hover {
-  border-bottom: 1px solid #fcfcfc;
+  border-bottom: 1px solid #fbfbfb;
 }
 
 .footer-copyright {
@@ -1077,5 +1173,43 @@ footer a:hover {
 
   .no-float {
     float: none;
+  }
+}
+.table-wrapper {
+  overflow-x: auto;
+}
+
+/**
+ * Used for development only:
+ */
+body:before {
+  background: #444;
+  bottom: 0;
+  color: #fbfbfb;
+  content: 'XS';
+  font-size: 0.75rem;
+  padding: .25em .5em;
+  position: fixed;
+  right: 0;
+  z-index: 999;
+}
+@media screen and (min-width: 30em) {
+  body:before {
+    content: 'S';
+  }
+}
+@media screen and (min-width: 45em) {
+  body:before {
+    content: 'M';
+  }
+}
+@media screen and (min-width: 60em) {
+  body:before {
+    content: 'L';
+  }
+}
+@media screen and (min-width: 75em) {
+  body:before {
+    content: 'XL';
   }
 }
